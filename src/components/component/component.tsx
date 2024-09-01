@@ -3,12 +3,11 @@ import Image from "next/image"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
-import Carousel from "@/components/Carousel"
 
 export function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="bg-background px-4 py-3 md:px-6 md:py-4 flex items-center justify-between">
+      <header className="bg-background px-4 py-3 md:px-6 md:py-0 flex items-center justify-between">
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
           <Image src="https://actsrehab.org/wp-content/uploads/2021/08/gww_03-1.webp" alt="Logo" width={120} height={120} />
           <span className="text-lg font-semibold">ACTS Counseling</span>
@@ -37,7 +36,6 @@ export function Component() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary/80">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-              {/* <Carousel /> */}
               <div className="flex flex-col justify-center space-y-4 text-primary-foreground">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -56,15 +54,30 @@ export function Component() {
                   Schedule an Appointment
                 </Link>
               </div>
-              <div className="flex items-center justify-center">
-                <img
-                  src="/placeholder.svg"
-                  width="400"
-                  height="400"
-                  alt="Counseling"
-                  className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full"
-                />
+              <div className="hidden flex-col items-center justify-center space-y-4 md:space-y-0 md:grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Link href="/" className="w-full max-w-xs rounded-lg bg-primary-foreground p-4 text-center text-primary hover:bg-primary-foreground/90 hover:text-white transition-colors shadow-md">
+                  Assessment/Evaluation
+                </Link>
+                <Link href="/" className="w-full max-w-xs rounded-lg bg-primary-foreground p-4 text-center text-primary hover:bg-primary-foreground/90 hover:text-white transition-colors shadow-md">
+                  Substance Abuse Disorder
+                </Link>
+                <Link href="/" className="w-full max-w-xs rounded-lg bg-primary-foreground p-4 text-center text-primary hover:bg-primary-foreground/90 hover:text-white transition-colors shadow-md">
+                  Mental Health
+                </Link>
+                <Link href="/" className="w-full max-w-xs rounded-lg bg-primary-foreground p-4 text-center text-primary hover:bg-primary-foreground/90 hover:text-white transition-colors shadow-md">
+                  Gambling Addiction
+                </Link>
+                <Link href="/" className="w-full max-w-xs rounded-lg bg-primary-foreground p-4 text-center text-primary hover:bg-primary-foreground/90 hover:text-white transition-colors shadow-md">
+                  Domestic Violence
+                </Link>
+                <Link href="/" className="w-full max-w-xs rounded-lg bg-primary-foreground p-4 text-center text-primary hover:bg-primary-foreground/90 hover:text-white transition-colors shadow-md">
+                  Anger Management
+                </Link>
+                <Link href="/" className="w-full max-w-xs rounded-lg bg-primary-foreground p-4 text-center text-primary hover:bg-primary-foreground/90 hover:text-white transition-colors shadow-md">
+                  Community Education and Outreach
+                </Link>
               </div>
+
             </div>
           </div>
         </section>
@@ -161,7 +174,7 @@ export function Component() {
                     </div>
                   </div>
                   <p className="text-muted-foreground">
-                    "Serenity Counseling has been a game-changer for me. The therapists are truly compassionate and\n
+                    "ACTS Counseling has been a game-changer for me. The therapists are truly compassionate and\n
                     helped me work through some difficult personal issues. I highly recommend their services."
                   </p>
                 </div>
@@ -179,7 +192,7 @@ export function Component() {
                     </div>
                   </div>
                   <p className="text-muted-foreground">
-                    "I was hesitant to try counseling, but Serenity Counseling made the process so comfortable and\n
+                    "I was hesitant to try counseling, but ACTS Counseling made the process so comfortable and\n
                     welcoming. The therapists truly listen and provide invaluable guidance. I'm grateful for their\n
                     support."
                   </p>
