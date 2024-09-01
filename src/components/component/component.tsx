@@ -12,6 +12,14 @@ export function Component() {
           <Image src="https://actsrehab.org/wp-content/uploads/2021/08/gww_03-1.webp" alt="Logo" width={120} height={120} />
           <span className="text-lg font-semibold">ACTS Counseling</span>
         </Link>
+        <nav className="hidden md:flex items-center gap-6">
+          <Link href="/" className="text-sm font-medium text-primary hover:underline">Home</Link>
+          <Link href="/" className="text-sm font-medium text-primary hover:underline">About Us</Link>
+          <Link href="/" className="text-sm font-medium text-primary hover:underline">Programs</Link>
+          <Link href="/" className="text-sm font-medium text-primary hover:underline">Funding</Link>
+          <Link href="/" className="text-sm font-medium text-primary hover:underline">Careers</Link>
+          <Link href="/" className="text-sm font-medium text-primary hover:underline">Contact Us</Link>
+        </nav>
         <div className="flex items-center gap-4">
           <Select>
             <SelectTrigger className="text-sm">
@@ -32,6 +40,7 @@ export function Component() {
           </Link>
         </div>
       </header>
+
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary/80">
           <div className="container px-4 md:px-6 mx-auto">
@@ -212,7 +221,8 @@ export function Component() {
         </section>
       </main>
       <footer className="bg-muted p-6 md:py-12 w-full">
-        <div className="container max-w-7xl text-lead grid grid-cols-1 text-center md:text-left md:grid-cols-3 lg:grid-cols-5 gap-8 mx-auto">
+        <div className="container max-w-7xl text-lead grid grid-cols-1 text-center md:text-left md:grid-cols-3 lg:grid-cols-6 gap-8 mx-auto">
+          <Image src="https://actsrehab.org/wp-content/uploads/2021/08/gww_03-1.webp" alt="Logo" width={200} height={200} />
           <div className="grid gap-4 md:gap-1">
             <h3 className="font-semibold">About</h3>
             <Link href="#" prefetch={false}>
