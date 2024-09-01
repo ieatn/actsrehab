@@ -130,8 +130,8 @@ export function Component() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
               <div className="flex flex-col items-center justify-center space-y-4">
-                <Avatar className="h-32 w-32">
-                  {/* <Image src="https://actsrehab.org/wp-content/uploads/2023/03/2-2.jpg" alt="taesonlee" width={128} height={128}/> */}
+                <Avatar className="h-[246px] w-[200px]">
+                  <Image src="https://actsrehab.org/wp-content/uploads/2023/03/2-2.jpg" alt="taesonlee" width={200} height={246}/>
                 </Avatar>
                 <div className="space-y-1 text-center">
                   <h4 className="text-lg font-semibold">Taeson Lee</h4>
@@ -139,17 +139,8 @@ export function Component() {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center space-y-4">
-                <Avatar className="h-32 w-32">
-                  {/* <Image src="https://actsrehab.org/wp-content/uploads/2023/03/2-2.jpg" alt="taesonlee" width={128} height={128}/> */}
-                </Avatar>
-                <div className="space-y-1 text-center">
-                  <h4 className="text-lg font-semibold">Taeson Lee</h4>
-                  <p className="text-muted-foreground">MBA, WSCGC, CDP, DVC, EXECUTIVE DIRECTOR</p>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-center space-y-4">
-                <Avatar className="h-32 w-32">
-                  {/* <Image src="https://actsrehab.org/wp-content/uploads/2023/09/Rectangle-7.png" alt="yohan chung" width={128} height={128} /> */}
+                <Avatar className="h-[246px] w-[200px]">
+                  <Image src="https://actsrehab.org/wp-content/uploads/2023/09/Rectangle-7.png" alt="yohan chung" width={200} height={246} />
                 </Avatar>
                 <div className="space-y-1 text-center">
                   <h4 className="text-lg font-semibold">Yohan Chung</h4>
@@ -157,8 +148,8 @@ export function Component() {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center space-y-4">
-                <Avatar className="h-32 w-32">
-                  {/* <Image src="https://actsrehab.org/wp-content/uploads/2023/06/Soo-Kim-1-1.jpg" alt="soo kim" width={128} height={128} /> */}
+                <Avatar className="h-[246px] w-[200px]">
+                  <Image src="https://actsrehab.org/wp-content/uploads/2023/06/Soo-Kim-1-1.jpg" alt="soo kim" width={200} height={246} />
                 </Avatar>
                 <div className="space-y-1 text-center">
                   <h4 className="text-lg font-semibold">Soo Kim</h4>
