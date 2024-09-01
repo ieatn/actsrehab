@@ -131,6 +131,15 @@ export function Component() {
               </div>
               <div className="flex flex-col items-center justify-center space-y-4">
                 <Avatar className="h-32 w-32">
+                  {/* <Image src="https://actsrehab.org/wp-content/uploads/2023/03/2-2.jpg" alt="taesonlee" width={128} height={128}/> */}
+                </Avatar>
+                <div className="space-y-1 text-center">
+                  <h4 className="text-lg font-semibold">Taeson Lee</h4>
+                  <p className="text-muted-foreground">MBA, WSCGC, CDP, DVC, EXECUTIVE DIRECTOR</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-4">
+                <Avatar className="h-32 w-32">
                   {/* <Image src="https://actsrehab.org/wp-content/uploads/2023/09/Rectangle-7.png" alt="yohan chung" width={128} height={128} /> */}
                 </Avatar>
                 <div className="space-y-1 text-center">
@@ -174,8 +183,8 @@ export function Component() {
                     </div>
                   </div>
                   <p className="text-muted-foreground">
-                    "ACTS Counseling has been a game-changer for me. The therapists are truly compassionate and\n
-                    helped me work through some difficult personal issues. I highly recommend their services."
+                    &quot;ACTS Counseling has been a game-changer for me. The therapists are truly compassionate and\n
+                    helped me work through some difficult personal issues. I highly recommend their services.&quot;
                   </p>
                 </div>
               </Card>
@@ -192,9 +201,9 @@ export function Component() {
                     </div>
                   </div>
                   <p className="text-muted-foreground">
-                    "I was hesitant to try counseling, but ACTS Counseling made the process so comfortable and\n
-                    welcoming. The therapists truly listen and provide invaluable guidance. I'm grateful for their\n
-                    support."
+                    &quot;I was hesitant to try counseling, but ACTS Counseling made the process so comfortable and\n
+                    welcoming. The therapists truly listen and provide invaluable guidance. I&apos;m grateful for their\n
+                    support.&quot;
                   </p>
                 </div>
               </Card>
