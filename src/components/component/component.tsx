@@ -1,45 +1,102 @@
+'use client'
 import Link from "next/link"
 import Image from "next/image"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
+import { useState } from "react"
 
 export function Component() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="bg-background px-4 py-3 md:px-6 md:py-0 flex items-center justify-between">
-        <Link href="#" className="flex items-center gap-2" prefetch={false}>
-          <Image src="https://actsrehab.org/wp-content/uploads/2021/08/gww_03-1.webp" alt="Logo" width={120} height={120} />
-          <span className="text-lg font-semibold">ACTS Counseling</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          <Link href="/" className="text-sm font-medium text-primary hover:underline">Home</Link>
-          <Link href="/" className="text-sm font-medium text-primary hover:underline">About Us</Link>
-          <Link href="/" className="text-sm font-medium text-primary hover:underline">Programs</Link>
-          <Link href="/" className="text-sm font-medium text-primary hover:underline">Funding</Link>
-          <Link href="/" className="text-sm font-medium text-primary hover:underline">Careers</Link>
-          <Link href="/" className="text-sm font-medium text-primary hover:underline">Contact Us</Link>
-        </nav>
-        <div className="flex items-center gap-4">
-          <Select>
-            <SelectTrigger className="text-sm">
-              <SelectValue placeholder="Language" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="en">English</SelectItem>
-              <SelectItem value="es">Español</SelectItem>
-              <SelectItem value="zh">中文</SelectItem>
-            </SelectContent>
-          </Select>
-          <Link
-            href="#"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-            prefetch={false}
+      <Link href="/" className="flex items-center gap-2" prefetch={false}>
+        <Image src="https://actsrehab.org/wp-content/uploads/2021/08/gww_03-1.webp" alt="Logo" width={120} height={120} />
+        <span className="text-lg font-semibold">ACTS Counseling</span>
+      </Link>
+      
+      {/* Hamburger Button for Mobile Menu */}
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="order-3 block md:hidden p-2 rounded-md text-primary hover:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-primary"
+      >
+        <svg
+          className="w-6 h-6"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex items-center gap-6">
+        <Link href="/" className="text-sm font-medium text-primary hover:underline">Home</Link>
+        <Link href="/" className="text-sm font-medium text-primary hover:underline">About Us</Link>
+        <Link href="/" className="text-sm font-medium text-primary hover:underline">Programs</Link>
+        <Link href="/" className="text-sm font-medium text-primary hover:underline">Funding</Link>
+        <Link href="/" className="text-sm font-medium text-primary hover:underline">Careers</Link>
+        <Link href="/" className="text-sm font-medium text-primary hover:underline">Contact Us</Link>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div className={`z-50 fixed top-0 right-0 h-full bg-background p-6 space-y-4 md:hidden transition-transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} style={{ width: '50vw' }}>
+        {/* Close Button */}
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute top-4 right-4 text-primary hover:text-primary-dark focus:outline-none"
+        >
+          <svg
+            className="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            Schedule Appointment
-          </Link>
-        </div>
-      </header>
+            <path d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <nav className="flex flex-col items-center justify-center h-full space-y-6">
+          <Link href="/" className="text-2xl font-semibold text-primary hover:bg-primary/10 rounded-md px-4 py-2 transition-colors">Home</Link>
+          <Link href="/" className="text-2xl font-semibold text-primary hover:bg-primary/10 rounded-md px-4 py-2 transition-colors">About Us</Link>
+          <Link href="/" className="text-2xl font-semibold text-primary hover:bg-primary/10 rounded-md px-4 py-2 transition-colors">Programs</Link>
+          <Link href="/" className="text-2xl font-semibold text-primary hover:bg-primary/10 rounded-md px-4 py-2 transition-colors">Funding</Link>
+          <Link href="/" className="text-2xl font-semibold text-primary hover:bg-primary/10 rounded-md px-4 py-2 transition-colors">Careers</Link>
+          <Link href="/" className="text-2xl font-semibold text-primary hover:bg-primary/10 rounded-md px-4 py-2 transition-colors">Contact Us</Link>
+        </nav>
+      </div>
+
+
+      <div className="flex items-center gap-4">
+        <Select>
+          <SelectTrigger className="text-sm">
+            <SelectValue placeholder="Language" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="en">English</SelectItem>
+            <SelectItem value="es">Español</SelectItem>
+            <SelectItem value="zh">中文</SelectItem>
+          </SelectContent>
+        </Select>
+        <Link
+          href="#"
+          className="hidden md:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          prefetch={false}
+        >
+          Schedule Appointment
+        </Link>
+      </div>
+    </header>
 
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary/80">
@@ -213,7 +270,7 @@ export function Component() {
       </main>
       <footer className="bg-muted p-6 md:py-12 w-full">
         <div className="container max-w-7xl text-lead grid grid-cols-1 text-center md:text-left md:grid-cols-3 lg:grid-cols-6 gap-8 mx-auto">
-          <Image src="https://actsrehab.org/wp-content/uploads/2021/08/gww_03-1.webp" alt="Logo" width={200} height={200} />
+          <div className="flex items-center justify-center"><Image src="https://actsrehab.org/wp-content/uploads/2021/08/gww_03-1.webp" alt="Logo" width={200} height={200} /></div>
           <div className="grid gap-4 md:gap-1">
             <h3 className="font-semibold">About</h3>
             <Link href="#" prefetch={false}>
